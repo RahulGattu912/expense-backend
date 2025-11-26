@@ -35,7 +35,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                echo "This is deploy"
+                echo "This is deploy"   
             }
         }
 
