@@ -23,9 +23,10 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Install Dependencies') {
             steps {
-                echo "This is test"
+                // for single line commands, use sh
+                sh 'npm install'
             }
         }
 
