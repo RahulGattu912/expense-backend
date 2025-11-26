@@ -38,7 +38,6 @@ pipeline {
             }
         }
 
-        // asks for approval
         stage('Approval') {
             input {
                 message "Should we continue?"
