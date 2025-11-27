@@ -30,12 +30,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            when{
-                branch 'main'
-            }
+        stage('Docker build') {
             steps {
-                echo "This is deploy"
+                sh """
+                docker build -t joindevops/backend:${appVersion}
+                docker images
+                """
             }
         }
 
